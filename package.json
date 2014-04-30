@@ -1,0 +1,40 @@
+{
+  "name": "shield",
+  "description": "shield is a Zerious module",
+  "keywords": [
+    "shield"
+  ],
+  "version": "0.0.0",
+  "main": "shield.js",
+  "homepage": "http://github.com/zerious/shield",
+  "repository": "http://github.com/zerious/shield.git",
+  "bugs": {
+    "url": "http://github.com/zerious/shield/issues"
+  },
+  "author": {
+    "name": "Sam Eubank",
+    "email": "sameubank@gmail.com"
+  },
+  "contributors": {
+    "name": "Sam Eubank",
+    "email": "sameubank@gmail.com"
+  },
+  "license": "MIT",
+  "engines": [
+    "node >= 0.2.6"
+  ],
+  "scripts": {
+    "test": "mocha",
+    "retest": "mocha --watch",
+    "cover": "istanbul cover _mocha",
+    "report": "open coverage/lcov-report/index.html",
+    "coveralls": "istanbul cover _mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | coveralls && rm -rf ./coverage"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "zeriousify": "~0.0.4",
+    "mocha": "~1.17.1",
+    "istanbul": "~0.2.6",
+    "assert-plus": "~0.1.5"
+  }
+}
