@@ -6,10 +6,10 @@
   ],
   "version": "0.0.0",
   "main": "shield.js",
-  "homepage": "http://github.com/zerious/shield",
-  "repository": "http://github.com/zerious/shield.git",
+  "homepage": "http://lighter.io/shield",
+  "repository": "http://github.com/lighterio/shield.git",
   "bugs": {
-    "url": "http://github.com/zerious/shield/issues"
+    "url": "http://github.com/lighterio/shield/issues"
   },
   "author": {
     "name": "Sam Eubank",
@@ -19,22 +19,27 @@
     "name": "Sam Eubank",
     "email": "sameubank@gmail.com"
   },
-  "license": "MIT",
   "engines": [
     "node >= 0.2.6"
   ],
   "scripts": {
-    "test": "mocha",
-    "retest": "mocha --watch",
-    "cover": "istanbul cover _mocha",
+    "test": "./node_modules/exam/exam.js",
+    "retest": "./node_modules/exam/exam.js --watch",
+    "cover": "istanbul cover ./node_modules/exam/exam.js",
     "report": "open coverage/lcov-report/index.html",
-    "coveralls": "istanbul cover _mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | coveralls && rm -rf ./coverage"
+    "coveralls": "istanbul cover ./node_modules/exam/exam.js --report lcovonly -- -R spec && cat ./coverage/lcov.info | coveralls && rm -rf ./coverage"
   },
   "dependencies": {},
   "devDependencies": {
-    "zeriousify": "~0.0.4",
-    "mocha": "~1.17.1",
-    "istanbul": "~0.2.6",
-    "assert-plus": "~0.1.5"
-  }
+    "coveralls": "2.10.0",
+    "istanbul": "0.2.11",
+    "zeriousify": "0.1.7",
+    "exam": "0.0.5"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://github.com/lighterio/shield/blob/master/MIT-LICENSE.md"
+    }
+  ]
 }
